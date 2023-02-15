@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    color: #606c76;
+    color: #bedcf6;
     padding: 1rem 2rem 2rem;
     max-width: 90rem;
     font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -29,7 +29,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #606c76;
+    color: #acc8de;
 }
 
 dl,
@@ -49,7 +49,7 @@ ol ul,
 ul dl,
 ul ol,
 ul ul {
-    font-size: 90%;
+    font-size: 80%;
     margin: 1.5rem 0 1.5rem 3rem;
 }
 
