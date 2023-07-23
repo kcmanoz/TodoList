@@ -1,32 +1,27 @@
-const textInput = document.getElementById('type-input');
-const todoList = document.getElementById('todo');
-const todoForm = document.getElementById('form');
+const todoInput = document.querySelector('.todo-input');
+const todoList = document.querySelector('.todo-list');
+const addBtn = document.querySelector('.add-btn');
 
-todoForm.addEventListener('submit', submitHandler);
-todoList.addEventListener('click', listClickHandler);
 
-function addListItem(text) {
-    const node = document.createElement("li");
-    node.textContent = text;
-    todoList.append(node);
-}
+addBtn.addEventListener('click', () => {
+    if (todoInput.value) {
+        const li = document.createElement('li');
+        const textDiv = document.createElement('div');
+        const deleteDiv = document.createElement('div');
+        const deleteIcon = document.createElement('img');
 
-function submitHandler(e) {
-    e.preventDefault();
-    const text = textInput.value;
-    if (text !== '') {
-        addListItem(text);
-        textInput.value = '';
-        textInput.focus();
+        textDiv.textContent = todoInput.value;
+        textDiv.className = 'todo-text';
+
+        deleteIcon.src = 'delete.png';
+        deleteIcon.alt = 'Delete';
+        deleteIcon.addEventListener('click', () => li.remove());
+
+        deleteDiv.appendChild(deleteIcon);
+
+        li.appendChild(textDiv);
+        li.appendChild(deleteDiv);
+        todoList.appendChild(li);
+        todoInput.value = '';
     }
-}
-
-function listClickHandler(e) {
-    if (e.target.tagName = "LI") {
-        if (e.target.classList.contains("done")) {
-            e.target.remove();
-        } else {
-            e.target.classList.add("done");
-        }
-    }
-}
+});
