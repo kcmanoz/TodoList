@@ -2,15 +2,15 @@ const todoInput = document.querySelector('.todo-input');
 const todoList = document.querySelector('.todo-list');
 const addBtn = document.querySelector('.add-btn');
 
-
 addBtn.addEventListener('click', () => {
-    if (todoInput.value) {
+    const inputValue = todoInput.value.trim();
+    if (inputValue.length > 0) {
         const li = document.createElement('li');
         const textDiv = document.createElement('div');
         const deleteDiv = document.createElement('div');
         const deleteIcon = document.createElement('img');
 
-        textDiv.textContent = todoInput.value;
+        textDiv.textContent = inputValue;
         textDiv.className = 'todo-text';
 
         deleteIcon.src = 'delete.png';
@@ -23,5 +23,8 @@ addBtn.addEventListener('click', () => {
         li.appendChild(deleteDiv);
         todoList.appendChild(li);
         todoInput.value = '';
+    }
+    else {
+        alert("Please, write the task to add!");
     }
 });

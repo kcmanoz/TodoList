@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   border: none;
 }
 
 body {
+  background-color: #fdfefe;
   font-family: "Poppins", sans-serif;
 }
 
@@ -11,10 +16,15 @@ body {
   width: 80%;
   max-width: 600px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #d4e6f1;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .input-box {
@@ -22,12 +32,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .todo-input {
   width: 75%;
   max-width: 500px;
-  height: 40px;
   padding: 10px;
   margin-right: 10px;
   font-size: 20px;
@@ -35,36 +45,61 @@ body {
   border-radius: 5px;
 }
 
+.todo-input:focus {
+  outline: 1px solid #2e86c1;
+}
+
 .add-btn {
   width: 20%;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
   background-color: #00a2ff;
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
 }
 
+.add-btn:hover {
+  background-color: #2e86c1;
+}
+
 .todo-list {
   list-style-type: none;
   padding-left: 0;
-  font-size: 20px;
 }
 
 .todo-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f4f4f4;
-  padding: 10px;
-  margin-bottom: 5px;
+  background: #fdfefe;
+  padding: 0 10px;
+  margin: 10px 0;
+  max-height: 40px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .todo-text {
+  font-size: 18px;
   flex-grow: 1;
 }
 
 .todo-list img {
   height: 30px;
   width: 30px;
+  margin-top: 5px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.todo-list img:hover {
+  animation: bounce 0.5s;
 }
