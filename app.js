@@ -40,7 +40,7 @@ function createTaskElement(task) {
     textInput.readOnly = true;     // By default, set the input field to read-only
     textInput.classList.add('todo-text');
 
-    editIcon.src = 'edit.png';
+    editIcon.src = './assets/edit.png';
     editIcon.alt = 'Edit';
 
     // Variable to track if we're currently editing the task
@@ -52,7 +52,7 @@ function createTaskElement(task) {
         if (!isEditing) {
             textInput.readOnly = false;
             textInput.focus();
-            editIcon.src = 'save.png';
+            editIcon.src = './assets/save.png';
             editIcon.alt = 'Save';
         } else {
             // If we're currently editing, save the changes and make the input field read-only again
@@ -62,7 +62,7 @@ function createTaskElement(task) {
                 updateTask(task, newText);
             }
             textInput.readOnly = true;
-            editIcon.src = 'edit.png';
+            editIcon.src = './assets/edit.png';
         }
 
         // Toggle the editing status
@@ -72,7 +72,7 @@ function createTaskElement(task) {
     // Add the edit button to its parent div
     editDiv.appendChild(editIcon);
 
-    deleteIcon.src = 'delete.png';
+    deleteIcon.src = './assets/delete.png';
     deleteIcon.alt = 'Delete';
     deleteIcon.classList.add('delete-icon');
 
