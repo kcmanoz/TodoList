@@ -1,6 +1,6 @@
-const todoInput = document.querySelector('#todo-input');
+const todoInput = document.querySelector('.todo-input');
 const todoList = document.querySelector('.todo-list');
-const addBtn = document.querySelector('#add-btn');
+const addBtn = document.querySelector('.add-btn');
 
 // Fetch tasks from local storage
 function getTasks() {

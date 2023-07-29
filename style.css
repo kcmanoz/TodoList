@@ -35,7 +35,7 @@ body {
   margin-bottom: 30px;
 }
 
-#todo-input {
+.todo-input {
   width: 75%;
   max-width: 500px;
   padding: 10px;
@@ -45,11 +45,11 @@ body {
   border-radius: 5px;
 }
 
-#todo-input:focus {
+.todo-input:focus {
   outline: 1px solid #2e86c1;
 }
 
-#add-btn {
+.add-btn {
   width: 20%;
   padding: 10px;
   font-size: 20px;
@@ -60,7 +60,7 @@ body {
   border-radius: 5px;
 }
 
-#add-btn:hover {
+.add-btn:hover {
   background-color: #2e86c1;
 }
 
@@ -108,6 +108,7 @@ body {
     transform: scale(1.2);
   }
 }
+
 .todo-list img:hover {
   animation: bounce 0.5s;
 }
